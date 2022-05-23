@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare function customInitFunctions():void;
+
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
@@ -8,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit(): void {
+    customInitFunctions();
   }
 
 }
