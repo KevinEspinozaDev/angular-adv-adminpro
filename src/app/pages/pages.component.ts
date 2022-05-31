@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SettingsService } from '../services/settings.service';
 
 declare function customInitFunctions():void;
 
@@ -11,10 +12,12 @@ declare function customInitFunctions():void;
 export class PagesComponent implements OnInit {
 
   constructor(
+    private settingsService: SettingsService
   ) { }
 
   ngOnInit(): void {
     customInitFunctions();
+    this.settingsService.checkCurrentTheme();
   }
 
 }
